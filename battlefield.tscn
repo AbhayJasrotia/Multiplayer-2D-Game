@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bvgvonnec6scs"]
+
+[ext_resource type="Script" uid="uid://b4cayowt8oakv" path="res://player.gd" id="1_hy033"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0p7yc"]
+size = Vector2(60, 40)
+
+[node name="Battlefield" type="Node2D" unique_id=1424792563]
+position = Vector2(180, 166)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=496979049]
+position = Vector2(500, 350)
+script = ExtResource("1_hy033")
+
+[node name="Body" type="Polygon2D" parent="Player" unique_id=1823723314]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2076771574]
+position = Vector2(399, -496)
+shape = SubResource("RectangleShape2D_0p7yc")
+
+[node name="Turret" type="Polygon2D" parent="Player" unique_id=1174647743]
